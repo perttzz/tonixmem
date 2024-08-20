@@ -3,102 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TNXMI/TON - The Memecoin of Tonix Mining App</title>
+    <title>TNXMI/TON - Revolutionary Memecoin for Tonix Mining</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #1c4fd8;
+            --secondary-color: #f0f4f8;
+            --text-color: #333;
+            --accent-color: #ff4757;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f0f4f8;
+            background-color: var(--secondary-color);
         }
         .container {
             background-color: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         h1, h2 {
-            color: #1c4fd8;
+            color: var(--primary-color);
+            margin-top: 30px;
+            font-weight: 600;
+        }
+        h1 {
+            font-size: 2.8em;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            animation: shimmer 2s infinite linear;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        h2 {
+            font-size: 2em;
+        }
+        .cta-button, .tiktok-button {
+            display: inline-block;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         .cta-button {
-            display: inline-block;
-            background-color: #1c4fd8;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
+            background-color: var(--primary-color);
         }
         .cta-button:hover {
             background-color: #153ba3;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        }
+        .tiktok-button {
+            background-color: var(--accent-color);
+        }
+        .tiktok-button:hover {
+            background-color: #ff2e43;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
         }
         .mining-button {
             margin-bottom: 30px;
-            display: inline-block;
         }
         .app-image, .video-container {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
-            margin: 20px 0;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .app-image:hover, .video-container:hover {
+            transform: scale(1.02);
         }
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
             height: 0;
-            overflow: hidden;
         }
-        .video-container iframe {
+        .video-container iframe, .video-container-vertical iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            border: none;
         }
         .video-container-vertical {
             position: relative;
             padding-bottom: 177.778%; /* 9:16 aspect ratio */
             height: 0;
             overflow: hidden;
-            margin-top: 20px;
+            margin-top: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
         }
-        .video-container-vertical iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        .video-container-vertical:hover {
+            transform: scale(1.02);
         }
         #google_translate_element {
             text-align: right;
             margin-bottom: 20px;
         }
-        .tiktok-button {
-            display: inline-block;
-            background-color: #000000;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+        ul li::before {
+            content: "✓";
+            color: var(--primary-color);
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2em;
         }
-        .tiktok-button:hover {
-            background-color: #333333;
+        p {
+            font-weight: 300;
+            font-size: 1.1em;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             body {
                 padding: 10px;
             }
             .container {
                 padding: 20px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 1.7em;
             }
         }
     </style>
@@ -112,44 +180,39 @@
 <body>
     <div id="google_translate_element"></div>
     <div class="container">
-        <h1>Welcome to TronixMining
-            token = TNXMI/TON </h1>
-        <p>The official memecoin of the revolutionary Tonix Mining App!</p>
+        <h1>TNXMI/TON: Revolutionizing Crypto Mining</h1>
+        <p>Welcome to the future of mobile mining with TronixMining's official memecoin!</p>
         
         <div class="video-container">
-            <iframe src="https://streamable.com/e/pk8yim" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe>
+            <iframe src="https://streamable.com/e/pk8yim" frameborder="0" allowfullscreen></iframe>
         </div>
         
         <h2>About TNXMI/TON</h2>
-        <p>TNXMI/TON is a memecoin created to celebrate the success of Tonix Mining App, a Telegram-integrated mining application that already has over 3 million users. This application is serious and intends to perform over time ! 📈 </p>
+        <p>TNXMI/TON is a groundbreaking memecoin born from the success of Tonix Mining App, a Telegram-integrated mining application boasting over 3 million users. We're not just another crypto - we're a serious contender built for long-term performance! 📈</p>
         
         <h2>Why Choose TonixMining?</h2>
         <ul>
-            <li>Supported by an active and growing community</li>
-            <li>Integrated into the Telegram ecosystem</li>
-            <li>Opportunity to participate in the mobile mining revolution</li>
+            <li>Backed by a vibrant, ever-growing community</li>
+            <li>Seamlessly integrated into the Telegram ecosystem</li>
+            <li>Be part of the mobile mining revolution</li>
         </ul>
         
         <img src="https://cdn-cf-east.streamable.com/image/18zkon.jpg?Expires=1693133400&Signature=Q3o4U8ynGoQmZVxK1EF8F3m3e3CYZiOfqZkYE9x3bRXBj3iDZjf9~3KCbCLkWXMuC2-nWWPxaPRHgz6PvR7EiZwz1FD6ZvpRm0Dg2YqL-2qvF6r576d0w6i4TMAU6~ZaRNj2AExJb7XlFf7aXtxfA4OHSEbLHKLGnLn3mzEjwS1jJFVNIzL6v69cXFgBXTVoTmT~tFCXCThJ8bOBYA3KFjmkKLWHxdLEHl-jpMg8q03OyPY0X6E5HwCMGXXSWddqTz6Yrxr-0ZteMYrGOKaS~9WoZulFbKoMVq53kIOXQv5oBZKFG0I9Vq-UB9MlkUkVnDDZo94xKiw0JjCNvf9UeQ__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ" alt="Tonix App" class="app-image" />
         
         <h2>How to Get TNXMI/TON</h2>
-        <p>You can exchange and buy TNXMI/TON directly on the Gas Pump platform in Telegram.</p>
+        <p>Ready to join the revolution? Exchange and buy TNXMI/TON directly on the Gas Pump platform in Telegram.</p>
         <a href="https://t.me/gasPump_bot/app?startapp=eyJyZWZfdXNlcl9pZCI6NjUyNjk3NjcwLCJ0b2tlbl9hZGRyZXNzIjoiRVFDTGtQbXlZUFNSNWlQMW5ZaWREUXJQd3hNWHVVTmh5emxxRjRPQTB6eE92bC04In0" class="cta-button" target="_blank">Buy TNXMI/TON</a>
         
         <h2>Join the Mining Revolution</h2>
-        <p>Start mining for free with Tonix Mining App:</p> 
-        <a href="https://t.me/Tonix_Mining_Bot?start=652697670" class="cta-button mining-button" target="_blank">Start Mining</a>
+        <p>Start your journey into the world of mobile mining - it's free, it's easy, it's the future:</p> 
+        <a href="https://t.me/Tonix_Mining_Bot?start=652697670" class="cta-button mining-button" target="_blank">Start Mining Now</a>
         
-        <p>officialFrenchTikTok :</p>
-        <a href="https://www.tiktok.com/@toncoincrypto" class="tiktok-button" target="_blank">TikTok</a>
+        <p>Follow us on TikTok for the latest updates:</p>
+        <a href="https://www.tiktok.com/@toncoincrypto" class="tiktok-button" target="_blank">Follow on TikTok</a>
         
         <div class="video-container-vertical">
-            <iframe src="https://streamable.com/e/3fy248?" frameborder="0" width="100%" height="100%" allowfullscreen style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe>
+            <iframe src="https://streamable.com/e/3fy248?" allowfullscreen></iframe>
         </div>
-        
-        <footer>
-           
-        </footer>
     </div>
 </body>
 </html>
