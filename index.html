@@ -12,7 +12,7 @@
             --text-color: #333;
             --accent-color: #ff4757;
             --green-color: #2ecc71;
-            --background-color: #23E584;
+            --background-color: #29A9EE;
         }
         body {
             font-family: 'Poppins', sans-serif;
@@ -29,48 +29,66 @@
             padding: 40px 20px;
         }
         .container {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
             padding: 40px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         .title-container {
-            background: linear-gradient(45deg, #f3f4f6, #ffffff);
+            background: linear-gradient(135deg, #ffffff, #f0f8ff);
             border: 2px solid var(--primary-color);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: var(--primary-color);
-            margin-top: 0;
-            font-weight: 800;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
         }
         h1 {
-            font-size: 2.8em;
-            text-align: center;
-            margin-bottom: 10px;
+            color: var(--primary-color);
+            margin: 0 0 15px;
+            font-weight: 800;
+            font-size: 3.2em;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            text-transform: uppercase;
             background: linear-gradient(45deg, var(--primary-color), #4a90e2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
+        .subtitle {
+            font-size: 1.4em;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .cta-primary {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-color), #4a90e2);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-top: 20px;
+        }
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        }
         h2 {
             font-size: 2em;
-            margin-top: 30px;
-        }
-        .subtitle {
-            font-size: 1.2em;
-            text-align: center;
-            color: var(--accent-color);
-            margin-bottom: 0;
-            font-weight: 600;
+            margin-top: 40px;
+            color: var(--primary-color);
         }
         .cta-button, .tiktok-button, .pumpfun-button {
             display: inline-block;
             color: white;
-            padding: 15px 30px;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 50px;
             margin-top: 20px;
@@ -83,26 +101,15 @@
         .cta-button {
             background-color: var(--primary-color);
         }
-        .cta-button:hover {
-            background-color: #153ba3;
+        .cta-button:hover, .tiktok-button:hover, .pumpfun-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.25);
         }
         .tiktok-button {
             background-color: var(--accent-color);
         }
-        .tiktok-button:hover {
-            background-color: #ff2e43;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-        }
         .pumpfun-button {
             background-color: var(--green-color);
-        }
-        .pumpfun-button:hover {
-            background-color: #27ae60;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
         }
         .mining-button {
             margin-bottom: 30px;
@@ -180,10 +187,13 @@
                 padding: 20px;
             }
             h1 {
-                font-size: 2.2em;
+                font-size: 2.5em;
             }
             h2 {
-                font-size: 1.7em;
+                font-size: 1.8em;
+            }
+            .subtitle {
+                font-size: 1.2em;
             }
         }
     </style>
@@ -199,17 +209,17 @@
         <div id="google_translate_element"></div>
         <div class="container">
             <div class="title-container">
-                <h1>TNXMI/TON & TNXMIN/SOL: Revolutionizing Crypto Mining</h1>
-                <p class="subtitle">Buy the token before everyone else and let's go to the moon together!</p>
+                <h1>TNXMI/TON & TNXMIN/SOL</h1>
+                <p class="subtitle">Revolutionizing Crypto Mining with Next-Gen Memecoins</p>
+                <p>Join the future of mobile mining with TonixMining's official tokens!</p>
+                <a href="#learn-more" class="cta-primary">Discover More</a>
             </div>
-            
-            <p>Welcome to the future of mobile mining with TonixMining's official memecoins!</p>
             
             <div class="video-container">
                 <iframe src="https://streamable.com/e/pk8yim" frameborder="0" allowfullscreen></iframe>
             </div>
             
-            <h2>About TNXMI/TON & TNXMIN/SOL</h2>
+            <h2 id="learn-more">About TNXMI/TON & TNXMIN/SOL</h2>
             <p>TNXMI/TON on the TON blockchain and TNXMIN/SOL on the Solana blockchain are groundbreaking memecoins born from the success of Tonix Mining App, a Telegram-integrated mining application boasting over 3 million users. We're not just another crypto - we're serious contenders built for long-term performance! 📈</p>
             
             <h2>Why Choose TonixMining?</h2>
