@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TNXMI/TON & TNXMIN/SOL - Revolutionary Memecoins for Tonix Mining</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #1c4fd8;
-            --secondary-color: #f0f4f8;
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
             --text-color: #333;
-            --accent-color: #ff4757;
-            --green-color: #2ecc71;
-            --background-color: #29A9EE;
+            --accent-color: #e74c3c;
+            --background-color: #B756CF;
         }
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             line-height: 1.8;
             color: var(--text-color);
             margin: 0;
@@ -35,37 +34,62 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         .title-container {
-            background: linear-gradient(135deg, #ffffff, #f0f8ff);
-            border: 2px solid var(--primary-color);
+            background: linear-gradient(135deg, #3498db, #2ecc71);
             border-radius: 15px;
-            padding: 30px;
+            padding: 40px;
             margin-bottom: 40px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .title-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         h1 {
-            color: var(--primary-color);
+            color: #fff;
             margin: 0 0 15px;
             font-weight: 800;
-            font-size: 3.2em;
+            font-size: 3.5em;
             letter-spacing: -1px;
             line-height: 1.2;
             text-transform: uppercase;
-            background: linear-gradient(45deg, var(--primary-color), #4a90e2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            animation: titlePulse 2s infinite;
+        }
+        @keyframes titlePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
         .subtitle {
-            font-size: 1.4em;
-            color: #666;
+            font-size: 1.5em;
+            color: #fff;
             margin-bottom: 20px;
-            font-weight: 400;
+            font-weight: 600;
+            position: relative;
+        }
+        .info-text {
+            font-size: 1.1em;
+            color: #fff;
+            margin-bottom: 15px;
+            position: relative;
         }
         .cta-primary {
             display: inline-block;
-            background: linear-gradient(45deg, var(--primary-color), #4a90e2);
-            color: white;
+            background: #fff;
+            color: var(--primary-color);
             padding: 15px 30px;
             text-decoration: none;
             border-radius: 50px;
@@ -73,12 +97,15 @@
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             margin-top: 20px;
+            position: relative;
         }
         .cta-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            background: var(--accent-color);
+            color: #fff;
         }
         h2 {
             font-size: 2em;
@@ -109,12 +136,12 @@
             background-color: var(--accent-color);
         }
         .pumpfun-button {
-            background-color: var(--green-color);
+            background-color: var(--secondary-color);
         }
         .mining-button {
             margin-bottom: 30px;
         }
-        .app-image, .video-container {
+        .app-image, .video-container, .how-to-get-image {
             max-width: 100%;
             height: auto;
             border-radius: 15px;
@@ -123,7 +150,7 @@
             overflow: hidden;
             transition: transform 0.3s ease;
         }
-        .app-image:hover, .video-container:hover {
+        .app-image:hover, .video-container:hover, .how-to-get-image:hover {
             transform: scale(1.02);
         }
         .video-container {
@@ -211,9 +238,9 @@
             <div class="title-container">
                 <h1>TNXMI/TON & TNXMIN/SOL</h1>
                 <p class="subtitle">Revolutionizing Crypto Mining with Next-Gen Memecoins</p>
-                <p>Join the future of mobile mining with TonixMining's official tokens!</p>
-                 <p>Buy the token in prelisting before the token promotion and let's go to the moon together!</p>
-                 <p>Everything is controlled and secure, do your research and letsgoo ! 📈 🚀 🚨 </p>
+                <p class="info-text">Join the future of mobile mining with TonixMining's official tokens!</p>
+                <p class="info-text">Buy the token in prelisting before the token promotion and let's go to the moon together!</p>
+                <p class="info-text">Everything is controlled and secure, do your research and letsgoo ! 📈 🚀 🚨 </p>
                 <a href="#learn-more" class="cta-primary">Discover More</a>
             </div>
             
@@ -235,6 +262,7 @@
             
             <h2>How to Get TNXMI/TON</h2>
             <p>Ready to join the TON revolution? Exchange and buy TNXMI/TON, our token on the TON blockchain, directly on the Gas Pump platform in Telegram.</p>
+            <img src="https://streamable.com/qvz6pu" alt="How to Get TNXMI/TON" class="how-to-get-image" />
             <a href="https://t.me/gasPump_bot/app?startapp=eyJyZWZfdXNlcl9pZCI6NjUyNjk3NjcwLCJ0b2tlbl9hZGRyZXNzIjoiRVFDTGtQbXlZUFNSNWlQMW5ZaWREUXJQd3hNWHVVTmh5emxxRjRPQTB6eE92bC04In0" class="cta-button" target="_blank">Buy TNXMI/TON on GasPump</a>
 
             <h2>How to Get TNXMIN/SOL</h2>
