@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TNXMI/TON & TNXMIN/SOL - Revolutionary Memecoins for Tonix Mining</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #1c4fd8;
@@ -28,36 +28,38 @@
             padding: 40px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
+        .title-container {
+            background: linear-gradient(45deg, #f3f4f6, #ffffff);
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
         h1, h2 {
             color: var(--primary-color);
-            margin-top: 30px;
-            font-weight: 600;
+            margin-top: 0;
+            font-weight: 800;
         }
         h1 {
             font-size: 2.8em;
             text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid var(--primary-color);
-            position: relative;
-            overflow: hidden;
-        }
-        h1::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-            animation: shimmer 2s infinite linear;
-        }
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, var(--primary-color), #4a90e2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
         h2 {
             font-size: 2em;
+            margin-top: 30px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            text-align: center;
+            color: var(--accent-color);
+            margin-bottom: 0;
+            font-weight: 600;
         }
         .cta-button, .tiktok-button, .pumpfun-button {
             display: inline-block;
@@ -189,7 +191,11 @@
 <body>
     <div id="google_translate_element"></div>
     <div class="container">
-        <h1>TNXMI/TON & TNXMIN/SOL: Revolutionizing Crypto Mining</h1>
+        <div class="title-container">
+            <h1>TNXMI/TON & TNXMIN/SOL: Revolutionizing Crypto Mining</h1>
+            <p class="subtitle">Buy the token before everyone else and let's go to the moon together!</p>
+        </div>
+        
         <p>Welcome to the future of mobile mining with TonixMining's official memecoins!</p>
         
         <div class="video-container">
